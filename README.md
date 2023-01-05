@@ -15,7 +15,7 @@ In order to use the library, you will need to obtain API keys from Alpha Vantage
 
 To use the library, require it in your project and create a new instance of the mda class:
 
-const mda = require('mda-js-api');
+const mda = require('mda');
 
 const api =  mda();
 
