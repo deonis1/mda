@@ -152,6 +152,12 @@ mda.test = async function () {
     mda.getStock12D().then((a) => {
         console.log(a);
     });
+    mda.getStockFH().then((a) => {
+        console.log(a);
+    });
+    mda.getStockAPV().then((a) => {
+        console.log(a);
+    });
    
 }
 
