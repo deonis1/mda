@@ -1,0 +1,27 @@
+{
+  "name": "market-data",
+  "version": "1.0.0",
+  "description": "Library to get market data from various APIs",
+  "main": "mda.js",
+  "scripts": {
+    "test": "node -e 'require(\"mda\").test()'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deonis1/mda.git"
+  },
+  "keywords": [
+    "Market",
+    "data",
+    "API",
+    "finhub",
+    "alphavantage",
+    "twelvedata"
+  ],
+  "author": "Denis Spasyuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deonis1/mda/issues"
+  },
+  "homepage": "https://github.com/deonis1/mda#readme"
+}
