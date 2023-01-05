@@ -37,12 +37,14 @@ const data = await api.getStockAPV({
 
 The getStockAPV method takes an optional object with the following properties:
 
-    symbol: The symbol of the stock to fetch data for (defaults to the default symbol set on the mda instance).
-    range: The range of data to fetch. Possible values are TIME_SERIES_INTRADAY, TIME_SERIES_DAILY, TIME_SERIES_DAILY_ADJUSTED, TIME_SERIES_WEEKLY, TIME_SERIES_WEEKLY_ADJUSTED, TIME_SERIES_MONTHLY, and TIME_SERIES_MONTHLY_ADJUSTED.
+    symbol: "The symbol of the stock to fetch data for (defaults to the default symbol set on the mda instance)."
+    range:  "TIME_SERIES_INTRADAY"
     interval: The interval of data to fetch. Possible values are 1min, 5min, 15min, 30min, 60min, daily, weekly, and monthly.
 
-The method returns an object with the fetched data.
-Twelvedata
+range could also be:  TIME_SERIES_DAILY, TIME_SERIES_DAILY_ADJUSTED, TIME_SERIES_WEEKLY, TIME_SERIES_WEEKLY_ADJUSTED, TIME_SERIES_MONTHLY, and TIME_SERIES_MONTHLY_ADJUSTED.
+
+
+# Twelvedata
 
 To fetch stock data from Twelvedata, use the getStock12D method:
 
@@ -58,5 +60,18 @@ The getStock12D method takes an optional object with the following properties:
     startdate: The start date for the data to fetch, in the format YYYY-MM-DD.
     interval: The interval of data to fetch. Possible values are 1min, 5min, 15min, 30min, 1h, 2h, 4h, 6h, 8h, 12h, 1d, 1w, and 1M.
 
-The method returns an object with the fetched data.
+# Finhub
+
+To fetch stock data from Twelvedata, use the getStock12D method:
+
+const data = await api.getStockFH({
+  symbol: 'your_symbol',
+  range: 1,
+  interval: '60'
+});
+
+
+# RUN TEST
+
+node -e 'var mda = require("./mda.js"); mda.finhub_key = "YOUR_KEY"; mda.alfav_key = "YOUR_KEY"; mda.twelve_key="YOUR_KEY"; mda.test()'
 
